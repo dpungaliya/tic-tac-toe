@@ -37,7 +37,7 @@ I used Firebase as the backend for the app. All the user accounts, player stats,
 
 ## Task 1: Authentication, Dashboard and Creating New Games
 
-I used the Firebase Auth module for authentication. It handles the password and email validation and manages user accounts on Firebase. I wrapped the user details, sign in and sign out functionality into a ViewModel that is shared over the activity. The signed in/signed out state is exposed as a LiveData that the Fragments observe. The navigation then is taken based on the changes in the observed value. The player stats (wins/losses/ties) are exposed using the UserDetailsViewModel as LiveData.
+I used the `Firebase Auth` module for authentication. It handles the password and email validation and manages user accounts on Firebase. I wrapped the user details, sign in and sign out functionality into a `ViewModel` that is shared over the activity. The signed in/signed out state is exposed as a `LiveData` that the Fragments observe. The navigation then is taken based on the changes in the observed value. The player stats (wins/losses/ties) are exposed using the `UserDetailsViewModel` as LiveData.
 
 The Dashboard has its own ViewModel that exposes the list of open games as a LiveData. This is observed and displayed on the DashboardFragment. The UserDetailsViewModel is used to handle the sign out option in the DashboardFragment as well. The DashboardFragment too observes the login status LiveData from the UserDetailsViewModel and navigates back to the login page on sign out.
 
