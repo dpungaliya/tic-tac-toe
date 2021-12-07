@@ -1,22 +1,24 @@
 # A. Assignment Information
 
-- Project name: Tic Tac Toe
+-Project name: Tic Tac Toe
 
-- Name: Dhaval Pungaliya
+-Name: Dhaval Pungaliya
 
-- ID No: 2018B2A70662G
+-ID No: 2018B2A70662G
 
-- Email: f20180662@goa.bits-pilani.ac.in
+-Email: f20180662@goa.bits-pilani.ac.in
 
 
 # B.App:
 ## 1)Description
 
-This is a simple Tic-Tac-Toe game. The game features both single and two player modes. 
+This app is a simple Tic-Tac-Toe game. The game has both single player and two player modes.
 
-The users create an account and this is synced with a server. 
-The Statistics of the player(wins/losses/ties) are tracked using this account. 
-Using the single player mode one can play against a computer based AI and using the two player mode one can play against another human user who is using their own device.
+The users create an account and this is synced with a server.
+ 
+The Statistics of the player(wins/losses/ties) are tracked using this account and are even displayed in the app.
+
+In the single player mode,a person can play against a computer,and using the two player mode one can play against another human user who is using their own device and has the same app.
 
 
 ## 2)Known Bugs
@@ -31,6 +33,7 @@ Network connection issue can lead to bugs during the game.
 # C. Task Descriptions
 
 I used Firebase as the backend for the app. All the user accounts, player stats, game details are stored and synced using Firebase(as shown in the modules).
+
 
 ## Task 1: Authentication, Dashboard and Creating New Games
 
@@ -54,22 +57,16 @@ A player, the creator, creates a two player game on the server and the UID of th
 There is setup required on the hosting side since Firebase is used as a backend and should always be running.
 After running the app, enter an email(proper format) and password(more than 6 characters). If you have not created an account yet, hit `SIGN UP`, else hit `LOG IN`. Once the sign up or login is successful, you will be taken to the dashboard where you view your stats, create new games or join existing ones. 
 
-The following accounts are already created (and they already have some wins/ties/losses associated with them) should you wish to use them:
-```
-test1@test.com 
-test2@test.com
-test3@test.com
-```
-The password for all of these accounts is: `test123`
+
 
 # E. Testing and Accessibility
 
-I did consider it, but since time was short I didn't do any testing(automated testing that is).
+I did not look at the aspects of testing,as it was very time consuming and for this assignment,very subjective as well.
 
 # F. Project Duration
 
-Hours taken to complete the project-60
+I took around 60-70 hours to do this final project.
 
 # G. Project Difficulty
 
-Rating- 8
+Rating- 8/10
