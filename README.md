@@ -1,21 +1,30 @@
 # A. Assignment Information
 
 - Project name: Tic Tac Toe
+
 - Name: Dhaval Pungaliya
+
 - ID No: 2018B2A70662G
+
 - Email: f20180662@goa.bits-pilani.ac.in
 
-# B. App Description
 
-This is a simple Tic-tac-toe game. The game features both single and two player modes. 
+# B. 1)App Description
+
+This is a simple Tic-Tac-Toe game. The game features both single and two player modes. 
+
 The users create an account and this is synced with a server. 
 The Statistics of the player(wins/losses/ties) are tracked using this account. 
 Using the single player mode one can play against a computer based AI and using the two player mode one can play against another human user who is using their own device.
 
 
-## Known Bugs
+# 2)Known Bugs
 
-Players losing network connection is not handled properly during the games. For a single player game this can cause issues like player stats not updating after a game if the network access is lost in between the game and the app is closed/restarted before internet access is regained. For a two player game this can cause issues like player1 simply waiting for player2 to make their move if player2 has lost their network.
+Players losing network connection is not handled properly during the games. 
+
+(i)For a single player game this can cause issues like player stats not updating after a game if the network access is lost in between the game and the app is closed/restarted before internet access is regained. 
+
+(ii)For a two player game this can cause issues like player1 simply waiting for player2 to make their move if player2 has lost their network.
 
 
 # C. Task Descriptions
