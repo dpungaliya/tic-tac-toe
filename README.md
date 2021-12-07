@@ -9,15 +9,6 @@
 
 This is a simple Tic-tac-toe game. The game features both single and two player modes. User's create an account and this is synced with a server. The player stats like wins/losses/ties are tracked using this account. Using the single player mode one can play against a computer based AI and using the two player mode one can play against another human user who is using their own device.
 
-## Screenshots
-
-The following are a sequence of screenshots that show a two player game from creation to finish. There are two distinct instances of the app running on the same device(using the dual apps feature) and the displayed in split screen mode. Both instances are communicating with each other over the internet using Firebase.
-
-| | | |
-|:-------------------------:|:-------------------------:|:---------------------:|
-!["1. Dashboard"](./screenshots/01_dashboard.png "1. Dashboard") | !["2. Creating a two player game"](./screenshots/02_creating_two_player_game.png "2. Creating a two player game") | !["3. Created a two player game"](./screenshots/03_created_two_player_game.png "3. Created a two player game")
-!["4. Joined a two player game"](./screenshots/04_joined_two_player_game.png "4. Joined a two player game") | !["5. Two player game in progress"](./screenshots/05_two_player_game_in_progress.png "5. Two player game in progress") | !["6. Two player game ended"](./screenshots/06_two_player_game_ended.png "6. Two player game ended")
-!["7. Dashboard after two player game"](./screenshots/07_dashboard_after_two_player_game.png "7. Dashboard after 2 player game") | |
 
 ## Known Bugs
 
