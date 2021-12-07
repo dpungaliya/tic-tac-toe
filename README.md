@@ -9,7 +9,8 @@
 - Email: f20180662@goa.bits-pilani.ac.in
 
 
-# B. 1)App Description
+# B.App:
+## 1)Description
 
 This is a simple Tic-Tac-Toe game. The game features both single and two player modes. 
 
@@ -18,18 +19,18 @@ The Statistics of the player(wins/losses/ties) are tracked using this account.
 Using the single player mode one can play against a computer based AI and using the two player mode one can play against another human user who is using their own device.
 
 
-# 2)Known Bugs
+## 2)Known Bugs
 
-Players losing network connection is not handled properly during the games. 
+Network connection issue can lead to bugs during the game. 
 
-(i)For a single player game this can cause issues like player stats not updating after a game if the network access is lost in between the game and the app is closed/restarted before internet access is regained. 
+(i)Single player game- Eg: Player stats not updating after a game if the network access is lost in between the game and the app is closed/restarted before internet access is regained. 
 
-(ii)For a two player game this can cause issues like player1 simply waiting for player2 to make their move if player2 has lost their network.
+(ii)Two player game- Eg: Player1 simply waiting for player2 to make their move if player2 has lost their network.
 
 
 # C. Task Descriptions
 
-I used Firebase as the backend for the app. All the user accounts, player stats, game details are stored and synced using Firebase.
+I used Firebase as the backend for the app. All the user accounts, player stats, game details are stored and synced using Firebase(as shown in the modules).
 
 ## Task 1: Authentication, Dashboard and Creating New Games
 
