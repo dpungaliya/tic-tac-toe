@@ -7,27 +7,32 @@
     android:layout_height="match_parent"
     tools:context=".DashboardFragment">
 
-  <TextView
-      android:id="@+id/txt_score"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="@string/placeholder"
-      android:textAppearance="@style/TextAppearance.AppCompat.Large"
-      app:layout_constraintBottom_toTopOf="@+id/list"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
 
   <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/list"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
+      android:layout_height="0dp"
       app:layoutManager="LinearLayoutManager"
 
       app:layout_constraintBottom_toBottomOf="parent"
-      tools:layout_editor_absoluteX="16dp"
-      tools:listitem="@layout/fragment_item" />
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/guideline3"
+      app:layout_constraintVertical_bias="0.0"
+      tools:listitem="@layout/fragment_item">
 
+  </androidx.recyclerview.widget.RecyclerView>
+
+  <TextView
+      android:id="@+id/txt_no_games"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:text="@string/no_open_games_available"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="@+id/list"
+      app:layout_constraintStart_toStartOf="@+id/list"
+      app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
   <com.google.android.material.floatingactionbutton.FloatingActionButton
       android:id="@+id/fab_new_game"
@@ -38,4 +43,76 @@
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:srcCompat="@android:drawable/ic_input_add" />
+
+  <TextView
+      android:id="@+id/txt_num_ties"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginBottom="20dp"
+      android:minWidth="48dp"
+      android:minHeight="48dp"
+      android:text="@string/ties"
+      android:textAlignment="center"
+      android:textAllCaps="true"
+      android:textAppearance="@style/TextAppearance.AppCompat.Large"
+      app:layout_constraintBottom_toTopOf="@+id/textView"
+      app:layout_constraintEnd_toStartOf="@+id/txt_num_losses"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/txt_num_wins"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/txt_num_wins"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:layout_marginEnd="10dp"
+      android:minWidth="48dp"
+      android:minHeight="48dp"
+      android:text="@string/wins"
+      android:textAlignment="center"
+      android:textAllCaps="true"
+      android:textAppearance="@style/TextAppearance.AppCompat.Large"
+      app:layout_constraintBaseline_toBaselineOf="@+id/txt_num_ties"
+      app:layout_constraintEnd_toStartOf="@+id/txt_num_ties"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <TextView
+      android:id="@+id/txt_num_losses"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:layout_marginEnd="10dp"
+      android:minHeight="48dp"
+      android:text="@string/losses"
+      android:textAlignment="center"
+      android:textAllCaps="true"
+      android:textAppearance="@style/TextAppearance.AppCompat.Large"
+      app:layout_constraintBaseline_toBaselineOf="@+id/txt_num_ties"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/txt_num_ties" />
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10dp"
+      android:text="@string/open_games"
+      android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+      app:layout_constraintBottom_toTopOf="@+id/list"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintGuide_percent="0.3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

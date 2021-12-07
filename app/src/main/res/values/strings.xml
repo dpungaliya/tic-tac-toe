@@ -6,8 +6,9 @@
   <string name="game_fragment_label">Tic Tac Toe: Game</string>
   <string name="dashboard_fragment_label">Tic Tac Toe: Dashboard</string>
 
-  <string name="login">Register or Log In</string>
+  <string name="login">Log In</string>
   <string name="logout">Log Out</string>
+  <string name="signup">Sign Up</string>
 
   <string name="new_game">New Game</string>
   <string name="email">Email</string>
@@ -17,6 +18,9 @@
 
   <string name="new_game_dialog_message">Which type of game do you want to create?</string>
   <string name="forfeit_game_dialog_message">Are you sure you want to forfeit this game?</string>
+  <string name="you_won_message">You won!</string>
+  <string name="you_lost_message">You lost! Better luck next time!</string>
+  <string name="you_tied_message">You tied! That was close!</string>
 
   <string name="two_player">Two-Player</string>
   <string name="one_player">One-Player</string>
@@ -24,4 +28,22 @@
   <string name="yes">Yes</string>
   <string name="cancel">Cancel</string>
   <string name="confirm">Confirm</string>
+  <string name="ok">OK</string>
+
+  <string name="wins">wins</string>
+  <string name="losses">losses</string>
+  <string name="ties">ties</string>
+
+  <string name="MSG_AUTH_LOG_IN_SUCCESS">Logged in successfully!</string>
+  <string name="MSG_AUTH_INCORRECT_PASSWORD">Incorrect password. Please try again.</string>
+  <string name="MSG_AUTH_NETWORK_ERROR">Could not reach the server. Ensure that you are connected to a reliable network. Or try again later.</string>
+  <string name="MSG_AUTH_MALFORMED_EMAIL">Please enter a valid email.</string>
+  <string name="MSG_AUTH_WEAK_PASSWORD">Password is too weak. Ensure your password is longer than 6 characters.</string>
+  <string name="MSG_AUTH_UNKNOWN_ERROR">An unknown error occurred. Please try again later.</string>
+  <string name="MSG_AUTH_ACCOUNT_ALREADY_EXISTS">An account already exists for this email. Please log in.</string>
+  <string name="MSG_AUTH_ACCOUNT_DOES_NOT_EXIST">An account does not exist for this email. Please sign up for a new account.</string>
+
+  <string name="open_games">Open Two Player Games</string>
+  <string name="no_open_games_available">No open games available.</string>
+  <string name="err_cannot_create_game">Sorry you cannot create a game now as you are not connected to the server. Check your network or try again later.</string>
 </resources>

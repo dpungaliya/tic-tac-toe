@@ -8,10 +8,19 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class OpenGamesAdapter extends RecyclerView.Adapter<OpenGamesAdapter.ViewHolder> {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.Callable;
 
-  public OpenGamesAdapter() {
-    // FIXME if needed
+public class OpenGamesAdapter extends RecyclerView.Adapter<OpenGamesAdapter.ViewHolder> {
+  private static final String TAG = "OpenGamesAdapter";
+
+  private List<String> mGameIds;
+  private OpenGamesAdapter.ClickListener mClickListener;
+
+  public OpenGamesAdapter(OpenGamesAdapter.ClickListener clickListener) {
+    mGameIds = new ArrayList<>();
+    mClickListener = clickListener;
   }
 
   @NonNull
@@ -24,18 +33,24 @@ public class OpenGamesAdapter extends RecyclerView.Adapter<OpenGamesAdapter.View
 
   @Override
   public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
-    // TODO bind the item at the given position to the holder
+    holder.mGameId = mGameIds.get(position);
+    holder.mView.setOnClickListener(itemView -> {
+      mClickListener.onClick(holder.mGameId);
+    });
+    holder.mIdView.setText(Integer.toString(position + 1));
+    holder.mContentView.setText(holder.mGameId);
   }
 
   @Override
   public int getItemCount() {
-    return 0; // FIXME
+    return mGameIds.size();
   }
 
   public class ViewHolder extends RecyclerView.ViewHolder {
-    public final View mView;
-    public final TextView mIdView;
-    public final TextView mContentView;
+    private final View mView;
+    private final TextView mIdView;
+    private final TextView mContentView;
+    private String mGameId;
 
     public ViewHolder(View view) {
       super(view);
@@ -49,5 +64,14 @@ public class OpenGamesAdapter extends RecyclerView.Adapter<OpenGamesAdapter.View
     public String toString() {
       return super.toString() + " '" + mContentView.getText() + "'";
     }
+  }
+
+  public static interface ClickListener {
+    public void onClick(String gameId);
+  }
+
+  public void setValues(List<String> values) {
+    mGameIds = values;
+    notifyDataSetChanged();
   }
 }

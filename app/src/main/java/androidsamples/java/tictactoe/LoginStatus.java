@@ -1,0 +1,13 @@
+package androidsamples.java.tictactoe;
+
+public enum LoginStatus {
+  LOGGED_IN,
+  LOGGED_OUT,
+  INCORRECT_PASSWORD,
+  WEAK_PASSWORD,
+  MALFORMED_EMAIL,
+  ACCOUNT_ALREADY_EXISTS,
+  ACCOUNT_DOES_NOT_EXIST,
+  NETWORK_ERROR,
+  UNKNOWN_ERROR
+}
