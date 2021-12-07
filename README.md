@@ -39,13 +39,13 @@ I used Firebase as the backend for the app. All the user accounts, player stats,
 
 I used the `Firebase Auth` module for authentication. It handles the password and email validation and manages user accounts on Firebase. I wrapped the user details, sign in and sign out functionality into a `ViewModel` that is shared over the activity. The signed in/signed out state is exposed as a `LiveData` that the Fragments observe. The navigation then is taken based on the changes in the observed value. The player stats (wins/losses/ties) are exposed using the `UserDetailsViewModel` as LiveData.
 
-The Dashboard has its own ViewModel that exposes the list of open games as a LiveData. This is observed and displayed on the DashboardFragment. The UserDetailsViewModel is used to handle the sign out option in the DashboardFragment as well. The DashboardFragment too observes the login status LiveData from the UserDetailsViewModel and navigates back to the login page on sign out.
+The 'Dashboard' has its own ViewModel that exposes the list of open games as a LiveData. This is observed and displayed on the `DashboardFragment` The `UserDetailsViewModel` is used to handle the sign out option in the DashboardFragment as well. The DashboardFragment too observes the login status LiveData from the UserDetailsViewModel and navigates back to the login page on sign out.
 
-The FloatingActionButton on the DashboardFragment is used to create new games. A dialog is show on what type of game to create. The details on the type of game are passed to the GameFragment as arguments using SafeArgs.
+The `FloatingActionButton` on the `DashboardFragment` is used to create new games. A dialog is show on what type of game to create. The details on the type of game are passed to the `GameFragment` as arguments using SafeArgs.
 
 ## Task 2: Single Player Game
 
-A GameViewModel was created to handle all the logic of the GameFragment. A game type independent `Game`  is used as the model for the game and is used by the GameViewModel. The `AIPlayer` class is used to create an instance of the local device based player(simply chooses a random empty location for each move). After each move, the status of the game is checked, if the game has ended, the appropriate dialogs are shown and the player stats are updated on the server.
+A `GameViewModel` was created to handle all the logic of the `GameFragment`. A game type independent `Game`  is used as the model for the game and is used by the GameViewModel. The `AIPlayer` class is used to create an instance of the local device based player(simply chooses a random empty location for each move). After each move, the status of the game is checked, if the game has ended, the appropriate dialogs are shown and the player stats are updated on the server.
 
 
 ## Task 3: Two Player Game
@@ -62,6 +62,8 @@ After running the app, enter an email(proper format) and password(more than 6 ch
 # E. Testing and Accessibility
 
 I did not look at the aspects of testing,as it was very time consuming and for this assignment,very subjective as well.
+
+I took my friend,Karan Shah's help during this assignment. I also referred to a lot of online material for the same.
 
 # F. Project Duration
 
